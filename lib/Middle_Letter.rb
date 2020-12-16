@@ -1,13 +1,14 @@
 class Letter 
 
-    attr_reader :word 
-    attr_reader :len 
-    attr_reader :half
+    attr_reader :word, :len, :half
     
     def initialize(word)
-        @word = word 
-        @len = 0 
-        @half = 0
+        @word = word  
+
+        @len = 0  
+
+        @half = 0 
+
     end  
 
     def count_word
@@ -19,12 +20,12 @@ class Letter
     end  
 
     def find_middle
-        if @len =< 2
-            puts @word 
+        if @len <= 2
+             @word 
         elsif @len.even? 
-            
+            @word[(@half - 1)..@half]
         else  
-
+            @word[@half]
         end
     end
 end
